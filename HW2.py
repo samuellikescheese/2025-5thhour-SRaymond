@@ -29,4 +29,4 @@ print(gage)
 #9. Create a variable with a number that contains decimals.
 eat = 6.6
 #10. Round the number from #9 up or down using the round function.
-print(round(6.6))
+print(round(eat))
