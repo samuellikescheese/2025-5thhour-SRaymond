@@ -5,8 +5,7 @@
 #1. Create a list with 9 different numbers inside.
 num = [73,68,45,92,12,34,87,47,58]
 #2. Sort the list from highest to lowest.
-num.sort()
-#3. Create an empty list.
+num.sort(reverse=True)
 #3. Create an empty list.
 dude = []
 #4. Remove the median number from the first list and add it to the second list.
