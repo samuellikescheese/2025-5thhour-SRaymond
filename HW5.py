@@ -10,13 +10,11 @@ num.sort()
 #3. Create an empty list.
 dude = []
 #4. Remove the median number from the first list and add it to the second list.
-a = num[4]
+dude.append(num[4])
 num.pop(4)
-dude.append(a)
 #5. Remove the first number from the first list and add it to the second list.
-b = num[0]
+dude.append(num[0])
 num.pop(0)
-dude.append(b)
 #6. Print both lists.
 print(num)
 print(dude)
@@ -25,9 +23,8 @@ dude[0] = dude[0] + dude[1]
 dude.pop(1)
 print(dude[0])
 #8. Move the number back to the first list (like you did in #4 and #5 but reversed).
-c = dude[0]
+num.append(dude[0])
 dude.pop(0)
-num.append(c)
 #9. Sort the first list from lowest to highest and print it.
 num.sort()
 print(num)
