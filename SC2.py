@@ -17,10 +17,10 @@
 
 #Code Here:
 print ("put in you weight(KG) and height(M)")
-w = int(input())
-h = int(input())
+w = float(input())
+h = float(input())
 bmi = w / (h ** 2)
-print(f"your BMI number is{bmi}")
+print(f"your BMI number is {bmi}")
 if bmi < 18.5:
     print ("you are underweight")
 elif 18.5 < bmi < 24.9:
