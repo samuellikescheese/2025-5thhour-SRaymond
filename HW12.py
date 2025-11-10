@@ -26,7 +26,8 @@ while mun < 30 :
         print (mun)
 #4. Create a while loop that randomly generates a number between 1 and 6, prints the result,
 #and then breaks the loop if it's a 1.
-rand = 7
+rand = random.randint(1,6)
+print (rand)
 while rand > 1 :
     rand = random.randint(1,6)
     print (rand)
