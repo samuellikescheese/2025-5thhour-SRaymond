@@ -8,23 +8,19 @@
 #They want to start prototyping the rating system and are asking you to make it.
 #This prototype needs to allow the user to input the number of players, let each player rate
 #a single model from 1 to 5, and then give the average score of all of the ratings.
-import random
 x = 0
 print ("hello world")
 while 5 > 3:
-    print ("input how many players you have (more then 0)")
-    players = int(input(""))
+    players = int(input("input how many players you have (more then 0)  "))
     if players < 1:
         print ("more then 0 stupid")
         continue
     count = players
-    while not players == 0:
-        print ("input your score (1-5)")
-        score = int(input(""))
+    for i in range(0, players):
+        score = int(input("input your score (1-5)"))
         if score > 5 or score < 1 :
             print ("1 tho 5 stupid")
             continue
-        players -= 1
         x += score
         print (score)
     y = x / count
