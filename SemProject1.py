@@ -3,7 +3,6 @@
 #Assignment: Semester Project 1
 
 import random
-import time
 
 #Due to weird time travelling circumstances beyond explanation, you find yourself in 2018 or so
 #working for Larian Studios. Currently, they are working on the early prototypes of the hype
@@ -95,28 +94,30 @@ enemyDict = {
 
 #3. If the attack hits, roll damage and subtract it from the target's hit points.
 
-#4. The second in initiative rolls to attack (and rolls damage) afterwards.
+#4. The second in initiative rolls to attack (and rolls damage) afterward.
 
 #5. Repeat steps 2-5 until one of the characters is dead.
 rollhero = random.randint(1,20) + partyDict["Gale"]["Init"]
-rollevil = random.randint(1,20) + enemyDict["Goblin"]["Init"]
+rollevil = random.randint(1,20) + enemyDict["Mindflayer"]["Init"]
 print ("you play as gale the hero")
-if rollhero > rollevil:
+print ("your enemy is the Mindflayer (kill it)")
+if rollhero > rollevil or rollhero == rollevil:
     while 5 > 3:
-        print ("your enemy is the Goblin (kill it)")
-        print ("Gale attacks the Goblin")
-        if random.randint(1, 20) + partyDict["Gale"]["AtkMod"] >= (enemyDict["Goblin"]["AC"]):
-            enemyDict["Goblin"]["HP"] -= partyDict["Gale"]["Damage"]
-            if enemyDict["Goblin"]["HP"] <= 0:
-                print ("the Goblin is dead")
+        print ("Gale attacks the Mindflayer")
+        hero = random.randint(1,20)
+        evil = random.randint(1,20)
+        if  not hero == 1 or hero + partyDict["Gale"]["AtkMod"] >= (enemyDict["Mindflayer"]["AC"]) or hero == 20:
+            enemyDict["Mindflayer"]["HP"] -= partyDict["Gale"]["Damage"]
+            if enemyDict["Mindflayer"]["HP"] <= 0:
+                print ("the Mindflayer is dead")
                 exit()
             else:
-                print ("the Goblin stands")
+                print ("the Mindflayer stands")
         else :
             print ("he misses")
-        print ("the Goblin attacks")
-        if random.randint(1, 20) + (enemyDict["Goblin"]["AtkMod"] >=partyDict["Gale"]["AC"] ):
-            partyDict["Gale"]["HP"] -= enemyDict["Goblin"]["AtkMod"]
+        print ("the Mindflayer attacks")
+        if not evil == 1 or evil + enemyDict["Mindflayer"]["AtkMod"] >= (partyDict["Gale"]["AC"]) or evil == 20:
+            partyDict["Gale"]["HP"] -= enemyDict["Mindflayer"]["AtkMod"]
             if partyDict["Gale"]["HP"] <= 0:
                 print ("Gale is dead")
                 exit()
@@ -126,11 +127,11 @@ if rollhero > rollevil:
             print ("he misses")
 if rollevil > rollhero:
     while 5 > 3:
-        print("you play as gale the hero")
-        print("your enemy is the Goblin (kill it)")
-        print ("the Goblin attacks")
-        if random.randint(1, 20) + (enemyDict["Goblin"]["AtkMod"] >=partyDict["Gale"]["AC"] ):
-            partyDict["Gale"]["HP"] -= enemyDict["Goblin"]["AtkMod"]
+        print ("the Mindflayer attacks")
+        hero = random.randint(1, 20)
+        evil = random.randint(1, 20)
+        if not evil == 1 or evil + enemyDict["Mindflayer"]["AtkMod"] >= (partyDict["Gale"]["AC"]) or evil == 20:
+            partyDict["Gale"]["HP"] -= enemyDict["Mindflayer"]["AtkMod"]
             if partyDict["Gale"]["HP"] <= 0:
                 print ("Gale is dead")
                 exit()
@@ -138,13 +139,13 @@ if rollevil > rollhero:
                 print ("Gale stands")
         else :
             print ("he misses")
-        print("gale attacks the Goblin")
-        if random.randint(1, 20) + partyDict["Gale"]["AtkMod"] >= (enemyDict["Goblin"]["AC"]):
-            enemyDict["Goblin"]["HP"] -= partyDict["Gale"]["Damage"]
-            if enemyDict["Goblin"]["HP"] <= 0:
-                print("the Goblin is dead")
+        print("gale attacks the Mindflayer")
+        if not hero == 1 or hero + partyDict["Gale"]["AtkMod"] >= (enemyDict["Mindflayer"]["AC"]) or hero == 20:
+            enemyDict["Mindflayer"]["HP"] -= partyDict["Gale"]["Damage"]
+            if enemyDict["Mindflayer"]["HP"] <= 0:
+                print("the Mindflayer is dead")
                 exit()
             else:
-                print("the Goblin stands")
+                print("the Mindflayer stands")
         else:
             print("he misses")
