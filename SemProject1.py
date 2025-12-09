@@ -98,13 +98,13 @@ enemyDict = {
 #4. The second in initiative rolls to attack (and rolls damage) afterwards.
 
 #5. Repeat steps 2-5 until one of the characters is dead.
-rollhero = random.randint(1,20)
+rollhero = random.randint(1,20) + partyDict["Gale"]["Init"]
 rollevil = random.randint(1,20) + enemyDict["Goblin"]["Init"]
 print ("you play as gale the hero")
 if rollhero > rollevil:
     while 5 > 3:
         print ("your enemy is the Goblin (kill it)")
-        print ("gale attacks the Goblin")
+        print ("Gale attacks the Goblin")
         if random.randint(1, 20) + partyDict["Gale"]["AtkMod"] >= (enemyDict["Goblin"]["AC"]):
             enemyDict["Goblin"]["HP"] -= partyDict["Gale"]["Damage"]
             if enemyDict["Goblin"]["HP"] <= 0:
