@@ -29,10 +29,10 @@ numlist.append(random.randint(1,10))
 numlist.sort()
 print (numlist[3])
 #10. Create a while loop that starts at 1, prints i and then adds i to itself until it is greater than 100.
-e = 0
-while not e == 100:
-    e += 1
-    print (f"{e}i")
+i = 1
+while not i >= 100:
+    i += i
+    print (f"{i}i")
 #11. Create a list containing the names of five other students in the classroom.
 namelist = ["aiden", "ivan", "dylan", "hoegen", "brenlin"]
 #12. Create a for loop that individually prints out the names of each student in the list.
