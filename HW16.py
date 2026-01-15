@@ -1,4 +1,4 @@
-#Name:
+#Name: samuel raymond
 #Class: 5th Hour
 #Assignment: HW16
 import random
