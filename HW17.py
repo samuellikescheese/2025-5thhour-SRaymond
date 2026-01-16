@@ -27,16 +27,21 @@ def game():
         print ("bot picked scissors")
     if a == 1 and b == 3 or a == 2 and b == 1 or a == 3 and b == 2:
         print ("you win")
+        end()
     elif a == 3 and b == 1 or a == 1 and b == 2 or a == 2 and b == 3:
         print ("you lose")
+        end()
     else:
         print ("you tie")
+        end()
 #2. Create a def function that prompts the user to input if they want to play another round, and
 #repeats the RPS def function if they do or exits the code if they don't.
+def end():
     print("do you want to play again? 1(yes)")
     c = int(input())
     if c == 1:
         game()
     else:
         print ("thank you for playing")
+        exit()
 game()
