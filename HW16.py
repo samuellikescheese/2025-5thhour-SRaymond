@@ -18,10 +18,6 @@ def num(number):
     for i in range(1, number + 1):
         print (i)
 #5. Call all of the functions created in 1 - 4 with relevant arguments.
-me()
-avg(4,6,2)
-ani("monkey", "ant", "elephant", "pony", "gorilla")
-num(6)
 #6. Create a variable x that has the value of 2. Print x
 x = 2
 print (x)
