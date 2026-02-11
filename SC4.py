@@ -1,7 +1,6 @@
 #Name:samuel
 #Class: 5th Hour
 #Assigment: SC4
-import time
 import random
 
 #After an extended leave, the team lead for the RPG developer is back, and he wants to continue the project.
@@ -14,19 +13,10 @@ import random
 #to plug it into a calculator (SC5) and print the average.
 play = []
 def roll():
-    x = 0
-    while not x == 6:
-        d1 = random.randint(1, 6, )
-        d2 = random.randint(1, 6, )
-        d3 = random.randint(1, 6, )
-        d4 = random.randint(1, 6, )
-        guy = [d1,d2,d3,d4]
-        small = min(guy)
-        print (small)
-        guy.remove(min(guy))
-        print(sum(guy))
+    for i in range(6):
+        guy = [random.randint(1, 6, ),random.randint(1, 6, ),random.randint(1, 6, ),random.randint(1, 6, )]
+        guy.sort()
+        guy.remove(guy[0])
         play.append(sum(guy))
-        x += 1
-        time.sleep(0.5)
     print (play)
 roll()
