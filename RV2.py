@@ -34,4 +34,4 @@ samdict = {
 #9. Using the update function, add a fourth key and value determining your favorite candy.
 samdict.update({"candy" : "black licorice"})
 #10. Print ONLY the values of the dictionary from #8.
-print (samdict["name"], samdict["age"], samdict["color"])
+print (samdict.values())
