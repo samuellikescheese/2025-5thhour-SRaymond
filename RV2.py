@@ -25,6 +25,7 @@ print (lister[1] + lister[2] + lister[3])
 #7. Remove the very first number in the list from #2. Print the new first number.
 lister.pop(0)
 print (lister[0])
+print (lister)
 #8. Create a dictionary with three keys with respective values: your name, your grade, and your favorite color.
 samdict = {
     "name" : "sam",
